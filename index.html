@@ -5,17 +5,14 @@
     <meta charset="utf-8">
     <title>倒數計時器</title>
     <style>
-
         body {
             background-color: black;
         }
-
         h1 {
             color: white;
             text-align: center;
             font-size: 60px
         }
-
         p {
             color: white;
             text-align: center;
@@ -23,7 +20,6 @@
             float: left;
             vertical-align: middle;
         }
-
         #frame {
             width: 100%;
             height: 50%;
@@ -31,17 +27,11 @@
             justify-content: center;
             align-items: center;
         }
-
     </style>
-
 </head>
-
 <body>
-
 <h1>見面倒數計時器</h1>
-
 <div id="frame">
-
     <p class="s">倒數</p>
     <p id="days">11</p>
     <p class="s">天又</p>
@@ -51,17 +41,11 @@
     <p class="s">分鐘</p>
     <p id="sec">60</p>
     <p class="s">秒!!!</p>
-
 </div>
-
 </body>
 
 <script>
-
-
     let des = new Date(2021, 8, 19, 10, 12, 0)
-
-
     function updateTime() {
 
         let cur = new Date();
