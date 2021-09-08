@@ -1,37 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-TW">
 
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>倒數計時器</title>
+    <style>
 
-<style>
+        body {
+            background-color: black;
+        }
 
-body {
-  background-color:black;
-}
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 60px
+        }
 
-h1 {
-  color:white;
-  text-align:center;
-  font-size:60
-}
+        p {
+            color: white;
+            text-align: center;
+            font-size: 60px;
+            float: left;
+            vertical-align: middle;
+        }
 
-p {
-  color:white;
-  text-align:center;
-  font-size:60;
-  float:left;
-  vertical-align:middle;
-}
+        #frame {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-#frame {
-  width:100%;
-  height:50%;
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -58,28 +59,26 @@ p {
 <script>
 
 
-var des = new Date(2021, 8, 19, 10, 12, 0)
+    let des = new Date(2021, 8, 19, 10, 12, 0)
 
 
+    function updateTime() {
 
-function updateTime(){
+        let cur = new Date();
+        let _days = Math.floor((des - cur) / 1000 / 24 / 60 / 60)
+        let _hr = Math.floor(((des - cur) / 1000 / 60 / 60) % 24)
+        let _min = Math.floor(((des - cur) / 1000 / 60) % 60)
+        let _sec = Math.floor(((des - cur) / 1000) % 60)
 
-   var cur = new Date();
+        document.getElementById("days").innerHTML = _days;
+        document.getElementById("hr").innerHTML = _hr;
+        document.getElementById("mins").innerHTML = _min;
+        document.getElementById("sec").innerHTML = _sec;
+    }
 
-   var _days = Math.floor((des-cur)/1000/24/60/60)
-   var _hr =  Math.floor(((des-cur)/1000/60/60)%24)
-   var _min = Math.floor(((des-cur)/1000/60)%60)
-   var _sec = Math.floor(((des-cur)/1000)%60)
+    window.onload = updateTime();
 
-   document.getElementById("days").innerHTML = _days;
-   document.getElementById("hr").innerHTML = _hr;
-   document.getElementById("mins").innerHTML = _min;
-   document.getElementById("sec").innerHTML = _sec;
-}
-
-window.onload = updateTime()
-
-var intervalID = setInterval(updateTime, 1000);
+    let intervalID = setInterval(updateTime, 1000);
 
 </script>
 
