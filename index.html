@@ -5,59 +5,85 @@
     <meta charset="utf-8">
     <title>倒數計時器</title>
     <style>
-        body {
+        :root{
+            --animationDuration: 100;
+        }
+        body{
             background-color: black;
         }
-        h1 {
+        h1{
             color: white;
             text-align: center;
             font-size: 60px
         }
-        p {
+        p{
             color: white;
             text-align: center;
             font-size: 60px;
             float: left;
             vertical-align: middle;
         }
-        #frame {
+        #frame{
             width: 100%;
             height: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
+        #bgCard{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 50%;
+            opacity: 50%;
+            text-align: center;
+        }
+        #bgImg{
+
+        }
     </style>
 </head>
 <body>
-<h1>見面倒數計時器</h1>
+<h1>倒數計時器</h1>
 <div id="frame">
     <p class="s">倒數</p>
-    <p id="days">11</p>
+    <p id="days">00</p>
     <p class="s">天又</p>
-    <p id="hr">24</p>
+    <p id="hr">00</p>
     <p class="s">小時</p>
-    <p id="mins">60</p>
+    <p id="mins">00</p>
     <p class="s">分鐘</p>
-    <p id="sec">60</p>
+    <p id="sec">00</p>
     <p class="s">秒!!!</p>
 </div>
+<div id="bgCard">
+    <img alt="" id="bgImg" src="img/Friends-Cast-Birthday-Meme.jpg">
+</div>
+
 </body>
 
 <script>
     let des = new Date(2021, 8, 19, 10, 12, 0)
-    function updateTime() {
 
+    function updateTime() {
         let cur = new Date();
-        let _days = Math.floor((des - cur) / 1000 / 24 / 60 / 60)
-        let _hr = Math.floor(((des - cur) / 1000 / 60 / 60) % 24)
-        let _min = Math.floor(((des - cur) / 1000 / 60) % 60)
-        let _sec = Math.floor(((des - cur) / 1000) % 60)
+        let td = des-cur
+
+        if (td<0){
+            return;
+        }
+
+        let _days = Math.floor(td / 1000 / 24 / 60 / 60)
+        let _hr = Math.floor((td / 1000 / 60 / 60) % 24)
+        let _min = Math.floor((td / 1000 / 60) % 60)
+        let _sec = Math.floor((td / 1000) % 60)
 
         document.getElementById("days").innerHTML = _days;
         document.getElementById("hr").innerHTML = _hr;
         document.getElementById("mins").innerHTML = _min;
         document.getElementById("sec").innerHTML = _sec;
+
     }
 
     window.onload = updateTime();
