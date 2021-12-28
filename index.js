@@ -1,4 +1,4 @@
-let des = new Date(2021, 11, 10, 18, 30, 0)
+let des = new Date(2021, 11, 31, 13, 20, 0)
 
 function updateTime() {
     let cur = new Date();
