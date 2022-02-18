@@ -19,4 +19,4 @@ function updateTime() {
     document.getElementById("sec").innerHTML = _sec;
 }
 
-let intervalID = setInterval(updateTime, 1000);
+setInterval(updateTime, 1000);
