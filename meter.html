@@ -7,11 +7,37 @@
     <title>Meter</title>
 </head>
 <body>
-<button onclick="startMeter()">Start</button>
-<p>time: </p>
-<p id="timer">00:00:00</p>
-<p id="distance"></p>
-<p>車資：</p><p id="fare"></p>
+<div id="mainFrame">
+    <div id="outer_text_frame">
+        <div id="outer_text_frame1">
+            <p class="outer_text" id="outer_text1">通行費&emsp;&emsp;元</p>
+        </div>
+        <div id="outer_text_frame2">
+            <p class="outer_text" id="outer_text2">營業區</p>
+        </div>
+        <div id="outer_text_frame3">
+            <p class="outer_text" id="outer_text3">計時&emsp;時&emsp;分&emsp;秒</p>
+        </div>
+        <div id="outer_text_frame4">
+            <p class="outer_text" id="outer_text4">計程&emsp;公里</p>
+        </div>
+    </div>
+    <div id="innerFrame">
+        <div id="contentFrame1">
+            <p id="fare">70</p>
+        </div>
+        <div id="contentFrame2">
+        </div>
+        <div id="contentFrame3">
+            <p id="timer">00:00:00</p>
+        </div>
+        <div id="contentFrame4">
+            <p id="distance"></p>
+        </div>
+    </div>
+    <button onclick="startMeter()">Start</button>
+    <p>time: </p>
+</div>
 <script src="js/meter.js"></script>
 </body>
 </html>

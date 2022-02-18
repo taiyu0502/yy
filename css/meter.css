@@ -1,3 +1,91 @@
 body{
-    /*background-color: yellow;*/
+    background-color: #dcc306;
+    height: 100%;
+}
+.outer_text{
+    color: white;
+    font-size: large;
+}
+#outer_text_frame{
+    width: 85%;
+    height: 20%;
+    left: 5%;
+    position: absolute;
+    margin: auto;
+}
+#mainFrame{
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    top: 10%;
+    margin: auto;
+    background-color: black;
+    border-radius: 10px;
+}
+#innerFrame{
+    width: 85%;
+    height: 80%;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-color: #43fe71;
+}
+#outer_text_frame1{
+    width: 25%;
+    height: 100%;
+    line-height: 100%;
+    display: inline-block;
+}
+#outer_text_frame2{
+    width: 25%;
+    height: 100%;
+    line-height: 100%;
+    display: inline-block;
+}
+#outer_text_frame3{
+    width: 25%;
+    height: 100%;
+    line-height: 100%;
+    display: inline-block;
+}
+#outer_text_frame4{
+    width: 16%;
+    height: 100%;
+    line-height: 100%;
+    display: inline-block;
+}
+#contentFrame1{
+    width: 25%;
+    height: 30%;
+    border-bottom: 4px solid #1ec852;
+    border-right: 4px solid #1ec852;
+    display: inline-block;
+    text-align: right;
+}
+#contentFrame2{
+    width: 25%;
+    height: 30%;
+    border-bottom: 4px solid #1ec852;
+    border-right: 4px solid #1ec852;
+    display: inline-block;
+}
+#contentFrame3{
+    width: 25%;
+    height: 30%;
+    border-bottom: 4px solid #1ec852;
+    border-right: 4px solid #1ec852;
+    display: inline-block;
+}
+#contentFrame4{
+    width: 20%;
+    height: 30%;
+    border-bottom: 4px solid #1ec852;
+    display: inline-block;
+}
+#fare{
+    top: -15%;
+    right: 75%;
+    color: #1ec852;
+    position: absolute;
+    font-size: xxx-large;
 }

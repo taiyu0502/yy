@@ -79,14 +79,14 @@ function distance() {
 
     totalDistance += dist
     let _td = totalDistance.toFixed(3)
-    _distance.innerHTML = "距離： "+_td+"km, 時速："+dist/0.00083+"km/h"
+    _distance.innerHTML = "距離： "+_td+"km, 時速："+dist/0.000278+"km/h"
 
     lat0 = lat1
     lon0 = lon1
     return dist;
 }
 function fareCalculator(dist) {
-    let speed = dist/0.00083
+    let speed = dist/0.000278
     if (speed<5){
         timeCount++
     }else {
