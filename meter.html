@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
+<link rel="stylesheet" href="css/meter.css">
+<link rel="script">
 <head>
     <meta charset="UTF-8">
     <title>Meter</title>
 </head>
 <body>
-<button onclick="getLocation()">Start</button>
-<p>start position: </p>
-<p id="start_position"></p>
+<button onclick="startMeter()">Start</button>
+<p>time: </p>
+<p id="timer">00:00:00</p>
+<p id="distance"></p>
+<p>車資：</p><p id="fare"></p>
 <script src="js/meter.js"></script>
 </body>
 </html>
