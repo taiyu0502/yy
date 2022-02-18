@@ -89,3 +89,17 @@ body{
     position: absolute;
     font-size: xxx-large;
 }
+#timer{
+    top: -5%;
+    right: 25%;
+    color: #1ec852;
+    position: absolute;
+    font-size: xx-large;
+}
+#distance{
+    top: -15%;
+    right: 0;
+    color: #1ec852;
+    position: absolute;
+    font-size: xxx-large;
+}

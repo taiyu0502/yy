@@ -78,8 +78,7 @@ function distance() {
     fareCalculator(dist)
 
     totalDistance += dist
-    let _td = totalDistance.toFixed(3)
-    _distance.innerHTML = "距離： "+_td+"km, 時速："+dist/0.000278+"km/h"
+    _distance.innerHTML = totalDistance.toFixed(3)
 
     lat0 = lat1
     lon0 = lon1
