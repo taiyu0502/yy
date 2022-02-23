@@ -29,7 +29,6 @@ function checkTime(i){
     return i
 }
 
-
 function startMeter() {
     //-----Set location
     if (navigator.geolocation) {
@@ -78,7 +77,7 @@ function distance() {
     fareCalculator(dist)
 
     totalDistance += dist
-    _distance.innerHTML = totalDistance.toFixed(3)
+    _distance.innerHTML = totalDistance.toFixed(1)
 
     lat0 = lat1
     lon0 = lon1
@@ -100,4 +99,15 @@ function fareCalculator(dist) {
         distanceCount = 1.25
     }
     _fare.innerHTML = ""+totalFare
+}
+function getTime(){
+    let _t = new Date()
+    let _h = _t.getHours()
+    let _m = _t.getMinutes()
+    let _s = _t.getSeconds()
+    _h = checkTime(_h)
+    _m = checkTime(_m)
+    _s = checkTime(_s)
+    document.getElementById("clock").innerHTML = _h+":"+_m+":"+_s
+    setTimeout(getTime,500)
 }

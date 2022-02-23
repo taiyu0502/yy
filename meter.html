@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Meter</title>
 </head>
-<body>
+<body onload="getTime()">
 <div id="mainFrame">
     <div id="outer_text_frame">
         <div id="outer_text_frame1">
@@ -24,9 +24,10 @@
     </div>
     <div id="innerFrame">
         <div id="contentFrame1">
-            <p id="fare">70</p>
+            <p id="etag">0</p>
         </div>
         <div id="contentFrame2">
+            <p id="area">台中市</p>
         </div>
         <div id="contentFrame3">
             <p id="timer">00:00:00</p>
@@ -34,9 +35,13 @@
         <div id="contentFrame4">
             <p id="distance"></p>
         </div>
+        <div id="clockFrame">
+            <p id="clock">00:00:00</p>
+        </div>
+        <p id="fareUnit">車資&emsp;&emsp;&emsp;&emsp;元</p>
+        <p id="fare"></p>
     </div>
     <button onclick="startMeter()">Start</button>
-    <p>time: </p>
 </div>
 <script src="js/meter.js"></script>
 </body>

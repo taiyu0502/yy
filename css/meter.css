@@ -82,12 +82,48 @@ body{
     border-bottom: 4px solid #1ec852;
     display: inline-block;
 }
-#fare{
-    top: -15%;
-    right: 75%;
+#clockFrame{
+    top: 75%;
+    width: 35%;
+    height: 24%;
+    border-top: 4px solid #1ec852;
+    border-right: 4px solid #1ec852;
+    position: absolute;
+}
+#clock{
+    top: -50%;
+    left: 25%;
+    color: #1ec852;
+    position: absolute;
+    font-size: xx-large;
+}
+#fareUnit{
+    top: 50%;
+    left: 40%;
     color: #1ec852;
     position: absolute;
     font-size: xxx-large;
+}
+#fare{
+    top: 22%;
+    left: 70%;
+    color: #1ec852;
+    position: absolute;
+    font-size: 80px;
+}
+#etag{
+    top: -5%;
+    right: 75%;
+    color: #1ec852;
+    position: absolute;
+    font-size: xx-large;
+}
+#area{
+    top: -5%;
+    right: 50%;
+    color: #1ec852;
+    position: absolute;
+    font-size: xx-large;
 }
 #timer{
     top: -5%;
@@ -97,9 +133,9 @@ body{
     font-size: xx-large;
 }
 #distance{
-    top: -15%;
+    top: -5%;
     right: 0;
     color: #1ec852;
     position: absolute;
-    font-size: xxx-large;
+    font-size: xx-large;
 }
