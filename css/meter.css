@@ -98,11 +98,11 @@ body{
     font-size: xx-large;
 }
 #fareUnit{
-    top: 50%;
-    left: 40%;
+    top: 30%;
+    left: 35%;
     color: #1ec852;
     position: absolute;
-    font-size: xxx-large;
+    font-size: 50px;
 }
 #fare{
     top: 22%;
