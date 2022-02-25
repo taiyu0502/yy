@@ -109,5 +109,5 @@ function getTime(){
     _m = checkTime(_m)
     _s = checkTime(_s)
     document.getElementById("clock").innerHTML = _h+":"+_m+":"+_s
-    setTimeout(getTime,500)
+    //setTimeout(getTime,500)
 }
