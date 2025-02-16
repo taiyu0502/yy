@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3分鐘倒數計時器</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #countdown {
+    font-size: 48px;
+  }
+</style>
+</head>
+<body>
+
+<div id="countdown">00:00</div>
+
+<script>
+  function countdownTimer(minutes, seconds) {
+    const countdownDisplay = document.getElementById('countdown');
+
+    function updateDisplay() {
+      const formattedMinutes = String(minutes).padStart(2, '0');
+      const formattedSeconds = String(seconds).padStart(2, '0');
+      countdownDisplay.textContent = `${formattedMinutes}:${formattedSeconds}`;
+    }
+
+    function tick() {
+      if (minutes === 0 && seconds === 0) {
+        clearInterval(interval);
+        return;
+      }
+
+      if (seconds === 0) {
+        minutes--;
+        seconds = 59;
+      } else {
+        seconds--;
+      }
+
+      updateDisplay();
+    }
+
+    updateDisplay(); // 初始顯示
+    const interval = setInterval(tick, 1080); // 每秒更新
+  }
+
+  // 設定倒數時間 (分鐘, 秒)
+  countdownTimer(3, 0); // 10 分鐘
+</script>
+
+</body>
+</html>
